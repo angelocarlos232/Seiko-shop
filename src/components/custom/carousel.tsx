@@ -67,7 +67,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, interval = 12000 }) => {
                       Buy now
                     </Button>
                     <Button variant="outline" className="z-10">
-                      See more
+                      See more watches
                     </Button>
                   </div>
                 </div>
