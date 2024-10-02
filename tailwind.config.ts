@@ -23,6 +23,9 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		backgroundImage: {
+  			'vignette': 'radial-gradient(circle, transparent 50%, rgba(0,0,0,0.5) 150%)'
   		}
   	}
   },
