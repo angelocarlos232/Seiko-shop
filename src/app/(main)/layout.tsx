@@ -1,6 +1,6 @@
 import React from "react";
 import NavbarMain from "@/components/custom/navbar-main";
-
+import Footbar from "@/components/custom/footbar";
 export default function MainLayout({
   children,
 }: {
@@ -14,6 +14,7 @@ export default function MainLayout({
           {children}
         </div>
       </main>
+      <Footbar />
     </div>
   );
 }

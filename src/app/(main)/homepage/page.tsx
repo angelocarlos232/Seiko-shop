@@ -5,9 +5,9 @@ import { Text } from "@/components/custom/text";
 import ProductCarousel from "@/components/custom/productcarousel";
 
 const images = [
-  "https://seikowatchesbucket.s3.ap-southeast-2.amazonaws.com/carousel/carousel-1.png",
-  "https://seikowatchesbucket.s3.ap-southeast-2.amazonaws.com/carousel/store_image.jpg",
-  "https://seikowatchesbucket.s3.ap-southeast-2.amazonaws.com/carousel/watchwear.jpg",
+  "https://seikoshopbucket.s3.ap-southeast-2.amazonaws.com/flieger/carousel-1.png",
+  "https://seikoshopbucket.s3.ap-southeast-2.amazonaws.com/others/store_image.jpg",
+  "https://seikoshopbucket.s3.ap-southeast-2.amazonaws.com/others/watchwear.jpg",
 ];
 
 const categories = ["5 Sports", "King Seiko", "Lukia", "Astron", "Presage", "Prospex"];
