@@ -87,6 +87,13 @@ export function HomePage() {
               <Button variant="outline">Diameter</Button>
               <Button variant="outline">Thickness</Button>
             </div>
+
+            <Button
+              variant="link"
+              className="ml-auto transition-transform transform hover:scale-110"
+            >
+              Randomize 🎲
+            </Button>
           </div>
           <div className="grid grid-cols-3 gap-4 mt-7">
             {seikoWatches.map((product, index) => (
