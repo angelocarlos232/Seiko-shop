@@ -1,5 +1,21 @@
 const newImageSrc = "https://seikoshopbucket.s3.ap-southeast-2.amazonaws.com/flieger/srph21k1.png";
 
+const images = [
+    "https://seikoshopbucket.s3.ap-southeast-2.amazonaws.com/flieger/carousel-1.png",
+    "https://seikoshopbucket.s3.ap-southeast-2.amazonaws.com/others/store_image.jpg",
+    "https://seikoshopbucket.s3.ap-southeast-2.amazonaws.com/others/watchwear.jpg",
+  ];
+  
+  const categories = [
+    "5 Sports",
+    "King Seiko",
+    "Lukia",
+    "Astron",
+    "Presage",
+    "Prospex",
+  ];
+
+
 const seikoWatches = [
     // Prospex
     {
@@ -489,4 +505,4 @@ const seikoWatches = [
     }
   ];
 
-export { seikoWatches };
+export { seikoWatches, images, categories };
