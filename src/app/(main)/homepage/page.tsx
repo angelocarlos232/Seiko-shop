@@ -5,18 +5,21 @@ import { Text } from "@/components/custom/text";
 import ProductCarousel from "@/components/custom/productcarousel";
 import FilterBar from "@/components/custom/filterbar";
 import ProductTile from "@/components/custom/product-tile";
-import { seikoWatches, images, categories} from "@/assets/dummydata/productDummyData";
+import {
+  seikoWatches,
+  images,
+  categories,
+} from "@/assets/dummydata/productDummyData";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
-
-
-export function HomePage() {
+export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
-  const [filters, setFilters] = useState({});
+  const [filters, setFilters] = useState<unknown>({});
 
   const handleFilterChange = (newFilters: unknown) => {
     setFilters(newFilters);
+    console.log(filters);
     // Here you would typically fetch or filter your watch data based on the new filters
   };
 
@@ -65,7 +68,7 @@ export function HomePage() {
         </div>
       </div>
 
-      <div className="w-[99.1vw] bg-black py-12 h-screen flex flex-col items-center justify-center mb-16">
+      <div className="w-[99.1vw] bg-black py-12 h-[110vh] flex flex-col items-center justify-center mb-16">
         <div className="max-w-7xl">
           <Image
             src="https://seikoshopbucket.s3.ap-southeast-2.amazonaws.com/others/logo/seiko_logo.png"
@@ -82,28 +85,36 @@ export function HomePage() {
             Why Choose Seiko
           </Text>
           <div className="space-y-6">
-            <Text variant="default" size="lg" className="text-white">
+            <Text
+              variant="default"
+              size="lg"
+              className="text-white text-justify"
+            >
               Seiko has been at the forefront of watchmaking innovation for over
               a century, consistently delivering timepieces that blend
               traditional craftsmanship with cutting-edge technology. From
-              introducing the world's first quartz watch to pioneering the use
-              of titanium in watch cases, Seiko has repeatedly demonstrated its
-              commitment to pushing the boundaries of what's possible in
-              horology. This relentless pursuit of excellence ensures that when
-              you choose a Seiko watch, you're not just wearing a timepiece –
-              you're wearing a piece of horological history.
+              introducing the world&apos;s first quartz watch to pioneering the
+              use of titanium in watch cases, Seiko has repeatedly demonstrated
+              its commitment to pushing the boundaries of what&apos;s possible
+              in horology. This relentless pursuit of excellence ensures that
+              when you choose a Seiko watch, you&apos;re not just wearing a
+              timepiece – you&apos;re wearing a piece of horological history.
             </Text>
-            <Text variant="default" size="lg" className="text-white">
+            <Text
+              variant="default"
+              size="lg"
+              className="text-white text-justify"
+            >
               Beyond innovation, Seiko is renowned for its exceptional quality
-              and reliability across all price points. Whether you're investing
-              in a prestigious Grand Seiko or opting for a robust Seiko 5 Sports
-              model, you can trust that meticulous attention to detail and
-              rigorous quality control have gone into every watch. Seiko's
-              diverse range of collections caters to every style and need, from
-              elegant dress watches to rugged dive watches, ensuring that
-              there's a perfect Seiko for every wrist. By choosing Seiko, you're
-              not just buying a watch; you're embracing a legacy of precision,
-              durability, and timeless style.
+              and reliability across all price points. Whether you&apos;re
+              investing in a prestigious Grand Seiko or opting for a robust
+              Seiko 5 Sports model, you can trust that meticulous attention to
+              detail and rigorous quality control have gone into every watch.
+              Seiko&apos;s diverse range of collections caters to every style
+              and need, from elegant dress watches to rugged dive watches,
+              ensuring that there&apos;s a perfect Seiko for every wrist. By
+              choosing Seiko, you&apos;re not just buying a watch; you&apos;re
+              embracing a legacy of precision, durability, and timeless style.
             </Text>
           </div>
         </div>
@@ -124,7 +135,7 @@ export function HomePage() {
               <FilterBar onFilterChange={handleFilterChange} />
             </div>
             <div className="col-span-9">
-              <div className="flex border shadow-sm items-center rounded-md h-16 w-4/5 px-4 py-2">
+              <div className="flex border shadow-sm items-center rounded-md h-16 w-full px-4 py-2">
                 <Text variant="caption" size="xl" className="mr-4">
                   Sort by
                 </Text>
@@ -182,5 +193,3 @@ export function HomePage() {
     </div>
   );
 }
-
-export default HomePage;

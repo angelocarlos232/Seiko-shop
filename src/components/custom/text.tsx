@@ -2,6 +2,7 @@ import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
+import { Slot } from '@radix-ui/react-slot'
 
 const textVariants = cva(
   "text-foreground",
@@ -41,7 +42,7 @@ export interface TextProps
 
 const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? React.Slot : "p"
+    const Comp = asChild ? Slot : "p"
     return (
       <Comp
         className={cn(textVariants({ variant, size, className }))}

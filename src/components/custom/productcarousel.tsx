@@ -7,12 +7,20 @@ interface ProductCarouselProps {
 }
 
 const ProductCarousel: React.FC<ProductCarouselProps> = ({ selectedCategory }) => {
-  const [products, setProducts] = useState([]);
+  // Define the type for a product
+  type Product = {
+    isNew?: boolean;
+    imageSrc: string;
+    productName: string;
+    description: string;
+  };
+
+  const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     // In a real application, you would fetch products based on the selectedCategory
     // For this example, we'll use dummy data
-    const dummyProducts = [
+    const dummyProducts: Product[] = [
       {
         isNew: true,
         imageSrc: "https://seikowatchesbucket.s3.ap-southeast-2.amazonaws.com/carousel/carousel-1.png",

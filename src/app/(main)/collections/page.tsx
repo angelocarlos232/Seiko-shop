@@ -3,10 +3,11 @@ import React, { useState } from 'react';
 import FilterBar from '@/components/custom/filterbar';
 
 export default function CollectionsPage() {
-  const [filters, setFilters] = useState({});
+  const [filters, setFilters] = useState<unknown>({});
 
-  const handleFilterChange = (newFilters) => {
+  const handleFilterChange = (newFilters: unknown) => {
     setFilters(newFilters);
+    console.log(filters);
     // Here you would typically fetch or filter your watch data based on the new filters
   };
 
